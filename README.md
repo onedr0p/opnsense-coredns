@@ -1,2 +1,3 @@
-# opnsense-coredns-plugins
-A CoreDNS build specifically for Opnsense which includes some additional plugins
+# CoreDNS for OPNsense
+
+A CoreDNS FreeBSD build specifically for OPNsense which includes some additional plugins
