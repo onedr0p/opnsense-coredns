@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: coredns/coredns
-          ref: "${COREDNS_VERSION}"
+          ref: "${{ env.COREDNS_VERSION }}"
           path: coredns
       - name: Install Go
         uses: actions/setup-go@v2
@@ -36,7 +36,7 @@ jobs:
           sed -i '/^kubernetes:kubernetes/a k8s_gateway:github.com/ori-edge/k8s_gateway' plugin.cfg
       - name: Pull k8s_gateway
         run: |
-          go get github.com/ori-edge/k8s_gateway@${K8S_GATEWAY_VERSION}
+          go get github.com/ori-edge/k8s_gateway@${{ env.K8S_GATEWAY_VERSION }}
           go generate
           go mod tidy
       - name: Run GoReleaser
