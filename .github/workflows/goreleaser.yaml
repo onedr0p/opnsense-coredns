@@ -20,6 +20,8 @@ jobs:
         with:
           go-version: 1.17
       - run: |
+          ls -la
+      - run: |
           sed -i '/^kubernetes:kubernetes/a k8s_gateway:github.com/ori-edge/k8s_gateway' plugin.cfg
       - run: |
           go get github.com/ori-edge/k8s_gateway
