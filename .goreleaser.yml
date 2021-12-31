@@ -1,5 +1,5 @@
 builds:
-  - main: "./coredns"
+  - main: "./"
     binary: "coredns"
     goarch:
       - "amd64"
