@@ -1,0 +1,9 @@
+builds:
+  - main: "./coredns"
+    binary: "coredns"
+    goarch:
+      - "amd64"
+    goos:
+      - "freebsd"
+    env:
+      - CGO_ENABLED=0
