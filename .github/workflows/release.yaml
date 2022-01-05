@@ -42,6 +42,10 @@ jobs:
           go get github.com/ori-edge/k8s_gateway@${{ env.K8S_GATEWAY_VERSION }}
           go generate
           go mod tidy
+      - name: Change CoreDNS version
+        run: |
+          sed -i 's/${{ env.COREDNS_VERSION }}/${{ env.COREDNS_VERSION }}+${{github.ref_name}}/g' ./coremain/version.go
+          cat ./coremain/version.go
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
