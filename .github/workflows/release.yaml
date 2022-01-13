@@ -13,7 +13,7 @@ env:
   # renovate: datasource=github-releases
   COREDNS_VERSION: "1.8.6"
   # renovate: datasource=github-releases
-  K8S_GATEWAY_VERSION: "0.1.8"
+  K8S_GATEWAY_VERSION: "0.2.0"
 
 jobs:
   goreleaser:
